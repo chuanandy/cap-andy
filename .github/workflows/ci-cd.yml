@@ -27,6 +27,8 @@ jobs:
     - name: Run tests
       run: npm test
       working-directory: app
+    - name: Install Snyk CLI
+      run: npm install -g snyk
     - name: Run Snyk Test
       run: |
         cd app
