@@ -87,7 +87,7 @@ jobs:
       run: |
         IMAGE_TAG=prod-$(date +%s)
         REPO=${{ secrets.ECR_URI_PROD }}
-        docker build -t $REPO:$IMAGE_TAG app
+        docker build --platform linux/amd64 -t $REPO:$IMAGE_TAG app
         docker push $REPO:$IMAGE_TAG
         echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
     - name: Update Helm values
