@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: "<your-ECR-repo>"
+  repository: 255945442255.dkr.ecr.us-east-1.amazonaws.com/grp333-testing
   tag: "latest"
 
 service:
